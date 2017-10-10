@@ -1,0 +1,20 @@
+/*
+Theme Name: One Column Theme
+Theme URI: http://thewomenslawyer.com.ng
+Author: Taofik Adeniyi
+Author URI: http://taofikadeniyi.com
+Description: A blog about women and there rights
+Version: 1.1.2
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: blog, two-columns, left-sidebar, accessibility-ready, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Text Domain: thescript
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/*Bootstrap core CSS*/ 
+@import url('vendor/bootstrap/css/bootstrap.min.css');
+/*Custom styles for this template */
+@import url('css/1-col-portfolio.css');
