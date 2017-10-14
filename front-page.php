@@ -107,5 +107,14 @@
     <!-- /.container -->
 
 
+    <?php echo category_description(3); 
+    
+
+    $catID = get_the_category();
+    echo category_description( $catID[0] );
+    
+    ?>
+
+
 
 <?php get_footer(); ?>
