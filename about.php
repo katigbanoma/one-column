@@ -1,5 +1,5 @@
 <?php 
-    /* Template Name : about */
+    /*Template Name: authoritative */
     get_header()
 ?>
     <div class="container">
