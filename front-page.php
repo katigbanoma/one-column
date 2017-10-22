@@ -2,84 +2,60 @@
 
     
     <!-- Page Content -->
-    <div class="container">
+    <div class="container" style="font-family: 'Crimson Text', serif;">
 
       <!-- Page Heading -->
-      <h1 class="my-4">Page Heading
-        <small>Secondary Text</small>
-      </h1>
+      <h4>Welcome to The women's lawyer<br>
+        <small>&raquo&raquo To provide and educate</small>
+      </h4>
 
-      <!-- Project One -->
-      <div class="row">
-        <div class="col-md-7">
-          <a href="#">
-            <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
-          </a>
+      <?php
+          $args = array('orderby' => 'id');
+          $categories = get_categories($args);
+          foreach ($categories as $cat) :
+      ?>
+
+      <?php
+          $args = array( 'posts_per_page' => 1, 'cat' => $cat->term_id );
+          $the_query = new WP_Query( $args );
+          if($the_query->have_posts() ) :
+          while ( $the_query->have_posts() ) : $the_query->the_post();
+      ?>
+        <div class="row">
+          <div class="col-md-7">
+          <div style="border-bottom:1px solid #ccc">
+            <a href="<?php echo get_category_link( $cat->term_id ); ?>" class="mh-widget-title-link">
+                <?php echo strtoupper($cat->name); ?>
+            </a>
+          </div>
+          
+            <a href="<?php get_permalink() ?>">
+            <div class="bg-content" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>')"></div>
+            
+            </a>
+          </div>
+          <div class="col-md-5">
+            <h3><a href="<?php echo get_permalink(); ?>"><?php the_title() ?></a></h3>
+            <p><?php the_content() ?></p>
+            <p><?php echo get_post_time('F j, Y'); ?></p>
+            <a class="btn btn-primary" href="<?php echo get_permalink(); ?>" title="<?php echo get_the_title(); ?>">Continue Reading</a>
+          </div>
         </div>
-        <div class="col-md-5">
-          <h3>Project One</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
-          <a class="btn btn-primary" href="#">View Project</a>
-        </div>
-      </div>
-      <!-- /.row -->
+        <!-- /.row -->
+        <hr>
+     
 
-      <hr>
+        <?php endwhile; else: ?>
+            <p>No News Today</p>
+        <?php
+            endif;
+            // wp_reset_postdata();
+            endforeach;
+        ?>
 
-      <!-- Project Two -->
-      <div class="row">
-        <div class="col-md-7">
-          <a href="#">
-            <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
-          </a>
-        </div>
-        <div class="col-md-5">
-          <h3>Project Two</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, odit velit cumque vero doloremque repellendus distinctio maiores rem expedita a nam vitae modi quidem similique ducimus! Velit, esse totam tempore.</p>
-          <a class="btn btn-primary" href="#">View Project</a>
-        </div>
-      </div>
-      <!-- /.row -->
-
-      <hr>
-
-      <!-- Project Three -->
-      <div class="row">
-        <div class="col-md-7">
-          <a href="#">
-            <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
-          </a>
-        </div>
-        <div class="col-md-5">
-          <h3>Project Three</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, temporibus, dolores, at, praesentium ut unde repudiandae voluptatum sit ab debitis suscipit fugiat natus velit excepturi amet commodi deleniti alias possimus!</p>
-          <a class="btn btn-primary" href="#">View Project</a>
-        </div>
-      </div>
-      <!-- /.row -->
-
-      <hr>
-
-      <!-- Project Four -->
-      <div class="row">
-
-        <div class="col-md-7">
-          <a href="#">
-            <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
-          </a>
-        </div>
-        <div class="col-md-5">
-          <h3>Project Four</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quidem, consectetur, officia rem officiis illum aliquam perspiciatis aspernatur quod modi hic nemo qui soluta aut eius fugit quam in suscipit?</p>
-          <a class="btn btn-primary" href="#">View Project</a>
-        </div>
-      </div>
-      <!-- /.row -->
-
-      <hr>
-
+      
       <!-- Pagination -->
-      <ul class="pagination justify-content-center">
+      <!-- <ul class="pagination justify-content-center">
         <li class="page-item">
           <a class="page-link" href="#" aria-label="Previous">
             <span aria-hidden="true">&laquo;</span>
@@ -101,19 +77,12 @@
             <span class="sr-only">Next</span>
           </a>
         </li>
-      </ul>
+      </ul> -->
 
     </div>
     <!-- /.container -->
 
 
-    <?php echo category_description(3); 
-    
-
-    $catID = get_the_category();
-    echo category_description( $catID[0] );
-    
-    ?>
 
 
 

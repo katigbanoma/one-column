@@ -16,13 +16,18 @@
     </title>
     
     <link href="<?php echo get_stylesheet_directory_uri(); ?>/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Fjalla+One" rel="stylesheet">
   </head>
-
+  <?php wp_head(); ?>
   <body>
-
+      <style>
+        .navbgcol{
+        background-color:#839192;
+      }
+      </style>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbgcol">
+      <div class="container" style="font-family: 'Fjalla One', sans-serif;">
           <a class="navbar-brand" href="<?php bloginfo('siteurl'); ?>">
               <?php bloginfo('name'); ?>
           </a>
@@ -32,19 +37,17 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home
+              <a class="nav-link" href="<?php echo get_home_url(); ?>">Home
                 <span class="sr-only">(current)</span>
               </a>
             </li>
+            <?php $all_pages = get_pages(); foreach ($all_pages as $key => $page):?>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="<?php echo $page->guid?>">
+              <?php echo $page->post_title?>
+            </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
+            <?php endforeach;?>
           </ul>
         </div>
       </div>

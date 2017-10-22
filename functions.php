@@ -14,3 +14,5 @@ $string .= '</ul>';
 return $string; 
 }
 add_shortcode('wpb_categories', 'wpb_catlist_desc');
+
+add_theme_support( 'post-thumbnails' );
