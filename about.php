@@ -2,7 +2,7 @@
     /*Template Name: authoritative */
     get_header()
 ?>
-    <div class="container">
+    <div class="container brdcrm">
         <nav aria-label="breadcrumb" role="navigation">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo get_home_url() ?>">Home</a></li>

@@ -3,7 +3,7 @@
     get_header();
 ?>
     <div class="container">
-        <nav aria-label="breadcrumb" role="navigation">
+        <nav aria-label="breadcrumb brdcrm" role="navigation">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo get_home_url() ?>">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Contact us</li>
@@ -79,30 +79,6 @@
         </div>
     </div>
 </div>
-
-
-
-<style>
-    .map {
-        min-width: 300px;
-        min-height: 300px;
-        width: 100%;
-        height: 100%;
-    }
-
-    .header {
-        background-color: #F5F5F5;
-        color: #36A0FF;
-        height: 70px;
-        font-size: 27px;
-        padding: 10px;
-    }
-</style>
-
-
-
-
-
 
 
 <?php get_footer() ?>

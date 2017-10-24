@@ -1,11 +1,10 @@
 <?php get_header(); ?>
 
-    
     <!-- Page Content -->
     <div class="container" style="font-family: 'Crimson Text', serif;">
 
       <!-- Page Heading -->
-      <h4>Welcome to The women's lawyer<br>
+      <h4 class="h4pad">Welcome to The women's lawyer<br>
         <small>&raquo&raquo To provide and educate</small>
       </h4>
 
@@ -29,10 +28,11 @@
             </a>
           </div>
           
-            <a href="<?php get_permalink() ?>">
-            <div class="bg-content" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>')"></div>
-            
+            <a href="<?php echo get_permalink(); ?>">
+              <div class="bg-content main_img_height" style="background-size: 100% 250px; background-image: url('<?php echo get_the_post_thumbnail_url() ?>');">
+              </div>
             </a>
+
           </div>
           <div class="col-md-5">
             <h3><a href="<?php echo get_permalink(); ?>"><?php the_title() ?></a></h3>

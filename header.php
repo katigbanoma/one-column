@@ -20,14 +20,9 @@
   </head>
   <?php wp_head(); ?>
   <body>
-      <style>
-        .navbgcol{
-        background-color:#839192;
-      }
-      </style>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbgcol">
-      <div class="container" style="font-family: 'Fjalla One', sans-serif;">
+      <div class="container headcon">
           <a class="navbar-brand" href="<?php bloginfo('siteurl'); ?>">
               <?php bloginfo('name'); ?>
           </a>

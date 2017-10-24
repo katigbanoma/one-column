@@ -1,22 +1,4 @@
 <!-- Footer -->
-<style>
-  .acolor{
-    color: #fff;
-  }
-  .txtshad{
-    text-shadow: 1px 1px 1px #000;
-  }
-  .footftsize{
-    font-size: 13pt;
-    /* background: url(http://lorempixel.com/1080/780/) no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; */
-    background-color: #839192;
-    font-family: 'Crimson Text', serif; 
-  }
-</style>
 <footer class="py-5 footftsize">
     <div class="container" >
       <!-- <span class="fa-stack fa-lg">
