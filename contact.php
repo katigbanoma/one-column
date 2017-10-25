@@ -2,7 +2,7 @@
     /*Template Name: contact */
     get_header();
 ?>
-    <div class="container brdcrm">
+    <div class="container" style="margin-top: 50px;">
         <nav aria-label="breadcrumb" role="navigation">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo get_home_url() ?>">Home</a></li>

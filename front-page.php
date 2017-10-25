@@ -4,9 +4,11 @@
     <div class="container" style="font-family: 'Crimson Text', serif;">
 
       <!-- Page Heading -->
-      <h4 class="h4pad">Welcome to The women's lawyer<br>
-        <small>&raquo&raquo To provide and educate</small>
-      </h4>
+      <div class="h4pad" style="font-family: 'Josefin Sans', sans-serif;">
+      A space devoted to cultivating a
+      modest & productive lifestyle.<br>
+      <a href="" class="btn btn-primary">Learn More</a>
+      </div>
 
       <?php
           $args = array('orderby' => 'id');
