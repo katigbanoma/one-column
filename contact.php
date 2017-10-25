@@ -2,8 +2,8 @@
     /*Template Name: contact */
     get_header();
 ?>
-    <div class="container">
-        <nav aria-label="breadcrumb brdcrm" role="navigation">
+    <div class="container brdcrm">
+        <nav aria-label="breadcrumb" role="navigation">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo get_home_url() ?>">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Contact us</li>
