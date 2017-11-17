@@ -57,6 +57,9 @@
        font-family: 'Open Sans', sans-serif;
    }
    
+   .brdcrumb{
+        margin-top: 20px;
+   }
    .fb-profile img.fb-image-lg{
        z-index: 0;
        width: 100%;  

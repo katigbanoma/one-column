@@ -1,169 +1,88 @@
-<?php get_header() ?>
+<?php
+/**
+ * The template for displaying single post
+ *
+ * This is the template that displays all single post of any post type by default.
+ *
+ * @package theScript
+ * @subpackage Single Template
+ * @since v2017.01
+ */
 
-    <!-- Page Content -->
-    <div class="container">
+get_header(); ?>
 
-      <div class="row">
+        <div class="mh-wrapper clearfix">
+            <div class="mh-main clearfix">
+                <div id="main-content" class="mh-content" role="main" itemprop="mainContentOfPage">
 
-        <!-- Post Content Column -->
-        <div class="col-lg-8">
+                    <!--Breadcrumb-->
+                    <nav class="mh-breadcrumb"><span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="index.php" itemprop="url"><span itemprop="title">Home</span></a>
+                        </span><span class="mh-breadcrumb-delimiter"><i class="fa fa-angle-right"></i></span><span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                         <?php
+                            $category = get_the_category(); 
+                            $category_link = get_category_link($category[0]->cat_ID);
+                            $category_name = $category[0]->cat_name;
+                        ?>
 
-          <!-- Title -->
-          <h1>Post Title</h1>
+                        <a href="<?php echo $category_link ?>" itemprop="url">
+                        <span itemprop="title"><?php echo $category_name?></span>
+                        </a>
+                        </span><span class="mh-breadcrumb-delimiter"><i class="fa fa-angle-right"></i></span><?php echo get_the_title(); ?>
+                    </nav>
 
-          <!-- Author -->
-          <p class="lead">
-            by
-            <a href="#">Start Bootstrap</a>
-          </p>
 
-          <hr>
+                    <article>
+                        <header class="entry-header clearfix">
+                            <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
+                            <div class="mh-subheading-top"></div>
+                            <!--<h2 class="mh-subheading">This is a custom subheading for your article</h2>-->
+                            <div class="mh-meta entry-meta"> 
+                                <span class="entry-meta-date updated">
+                                    <i class="fa fa-clock-o"></i><a href="#"><?php echo get_post_time('F j, Y')?></a>
+                                </span>
+                                <span class="entry-meta-author author vcard"><i class="fa fa-user"></i><a class="fn" href="<?php echo get_the_author_link() ?>"><?php get_the_author(); ?></a></span>
+                                <span class="entry-meta-categories"><i class="fa fa-folder-open-o"></i><a href="#" rel="category tag">Politics</a></span>
+                                <span class="entry-meta-comments"><i class="fa fa-comment-o"></i><a href="#" class="mh-comment-count-link" ><?php echo wp_count_comments()->total_comments ?></a></span></div>
+                        </header>
 
-          <!-- Date/Time -->
-          <p>Posted on January 1, 2017 at 12:00 PM</p>
+                
 
-          <hr>
+                        <div id="text-3" class="mh-widget mh-posts-1 widget_text">
+                            <div class="textwidget">
+                                <div class="mh-ad-label">Advertisement</div>
+                                <div class="mh-ad-area">
+                                    <div style="font-size: 13px; padding: 0.5em; background: #f5f5f5; border: 1px solid #ebebeb; text-align: center;">
+                                    <?php 
+                                    $arg = array('post_type' => 'posts_banner', 'posts_per_page' => '2'); $the_query = new WP_Query( $arg ); 
+                                    if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); 
+                                    ?>
 
-          <!-- Preview Image -->
-          <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
+                                    <?php $the_query->get_field('banner_name'); ?>
+                                    <a target="_blank" href="<?php echo get_field('banner_url') ?>">                    
+                                    <img  id="img" src="<?php echo get_the_post_thumbnail_url(); ?>" style="width:350px; height:350px; margin-top:10px;" >
+                                    </a>
 
-          <hr>
+                                    <?php endwhile; else: ?>
+                                        <p>There are no header adverts available<p>
+                                    <?php endif; ?>
+                                        <!-- <a target="_blank" href="#" title="Purchase MH Magazine Premium">Here you can place more advertisements and banners</a></div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="entry-content clearfix">
 
-          <!-- Post Content -->
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>
+                            <!--<div class="bg-content" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>')"></div>-->
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>
+                            <figure class="entry-thumbnail"> <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo get_the_title() ?>" title="<?php echo get_the_title() ?>" />
+                                <!--<figcaption class="wp-caption-text">Image Credit: The Script Photography</figcaption>-->
+                            </figure>
 
-          <blockquote class="blockquote">
-            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-            <footer class="blockquote-footer">Someone famous in
-              <cite title="Source Title">Source Title</cite>
-            </footer>
-          </blockquote>
+                            <?php $one = get_the_content(); var_dump($one); exit(); ?>
+                            
+                           
+                        </div>
+                       
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>
-
-          <hr>
-
-          <!-- Comments Form -->
-          <div class="card my-4">
-            <h5 class="card-header">Leave a Comment:</h5>
-            <div class="card-body">
-              <form>
-                <div class="form-group">
-                  <textarea class="form-control" rows="3"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
-            </div>
-          </div>
-
-          <!-- Single Comment -->
-          <div class="media mb-4">
-            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-            <div class="media-body">
-              <h5 class="mt-0">Commenter Name</h5>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-            </div>
-          </div>
-
-          <!-- Comment with nested comments -->
-          <div class="media mb-4">
-            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-            <div class="media-body">
-              <h5 class="mt-0">Commenter Name</h5>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-
-              <div class="media mt-4">
-                <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-                <div class="media-body">
-                  <h5 class="mt-0">Commenter Name</h5>
-                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                </div>
-              </div>
-
-              <div class="media mt-4">
-                <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-                <div class="media-body">
-                  <h5 class="mt-0">Commenter Name</h5>
-                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Sidebar Widgets Column -->
-        <div class="col-md-4">
-
-          <!-- Search Widget -->
-          <div class="card my-4">
-            <h5 class="card-header">Search</h5>
-            <div class="card-body">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search for...">
-                <span class="input-group-btn">
-                  <button class="btn btn-secondary" type="button">Go!</button>
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Categories Widget -->
-          <div class="card my-4">
-            <h5 class="card-header">Categories</h5>
-            <div class="card-body">
-              <div class="row">
-                <div class="col-lg-6">
-                  <ul class="list-unstyled mb-0">
-                    <li>
-                      <a href="#">Web Design</a>
-                    </li>
-                    <li>
-                      <a href="#">HTML</a>
-                    </li>
-                    <li>
-                      <a href="#">Freebies</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-lg-6">
-                  <ul class="list-unstyled mb-0">
-                    <li>
-                      <a href="#">JavaScript</a>
-                    </li>
-                    <li>
-                      <a href="#">CSS</a>
-                    </li>
-                    <li>
-                      <a href="#">Tutorials</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Side Widget -->
-          <div class="card my-4">
-            <h5 class="card-header">Side Widget</h5>
-            <div class="card-body">
-              You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-      <!-- /.row -->
-
-    </div>
-    <!-- /.container -->
-
-<?php get_footer() ?>
+                    </article>
+                  

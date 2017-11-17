@@ -3,7 +3,7 @@
     get_header()
 ?>
 
-    <div class="container brdcrm">
+    <div class="container brdcrumb">
         <nav aria-label="breadcrumb" role="navigation">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo get_home_url() ?>">Home</a></li>
