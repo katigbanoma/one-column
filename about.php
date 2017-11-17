@@ -1,5 +1,5 @@
 <?php 
-    /*Template Name: authoritative */
+    /*Template Name: about */
     get_header()
 ?>
     <div class="container brdcrumb">
