@@ -29,9 +29,9 @@ function theme_styles()
   // Load all of the styles that need to appear on all pages
 	wp_enqueue_style( 'main', get_template_directory_uri() . '/style.css' );
 	wp_enqueue_style( 'vendor', get_template_directory_uri() . '/vendor/bootstrap/css/bootstrap.min.css' );
-	wp_enqueue_style( 'vendor', get_template_directory_uri() . '/css/1-col-portfolio.css' );
-	wp_enqueue_style( 'vendor', get_template_directory_uri() . '/css/font-awesome.min.css' );
-	wp_enqueue_style( 'vendor', get_template_directory_uri() . '/css/main.css' );
+	wp_enqueue_style( 'onecol', get_template_directory_uri() . '/css/1-col-portfolio.css' );
+	wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/css/font-awesome.min.css' );
+	wp_enqueue_style( 'maimain', get_template_directory_uri() . '/css/main.css' );
 	
 	// Conditionally load the FlexSlider CSS on the homepage
 	// if(is_page('home')) {
