@@ -5,20 +5,13 @@
         <nav aria-label="breadcrumb" role="navigation">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo get_home_url() ?>">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Contact us</li>
+                <li class="breadcrumb-item active" aria-current="page">Categories</li>
             </ol>
         </nav>
     </div>
     <!-- Page Content -->
     <div class="container">
          
-         
-         
-         
-    
-         
-         
-
       <div class="row">
       
         <!-- Blog Entries Column -->

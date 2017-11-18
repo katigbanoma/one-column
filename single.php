@@ -1,35 +1,7 @@
-<?php
-/**
- * The template for displaying single post
- *
- * This is the template that displays all single post of any post type by default.
- *
- * @package theScript
- * @subpackage Single Template
- * @since v2017.01
- */
-
-get_header(); ?>
-
+<?php  get_header(); ?>
         <div class="mh-wrapper clearfix">
             <div class="mh-main clearfix">
                 <div id="main-content" class="mh-content" role="main" itemprop="mainContentOfPage">
-
-                    <!--Breadcrumb-->
-                    <nav class="mh-breadcrumb"><span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="index.php" itemprop="url"><span itemprop="title">Home</span></a>
-                        </span><span class="mh-breadcrumb-delimiter"><i class="fa fa-angle-right"></i></span><span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-                         <?php
-                            $category = get_the_category(); 
-                            $category_link = get_category_link($category[0]->cat_ID);
-                            $category_name = $category[0]->cat_name;
-                        ?>
-
-                        <a href="<?php echo $category_link ?>" itemprop="url">
-                        <span itemprop="title"><?php echo $category_name?></span>
-                        </a>
-                        </span><span class="mh-breadcrumb-delimiter"><i class="fa fa-angle-right"></i></span><?php echo get_the_title(); ?>
-                    </nav>
-
 
                     <article>
                         <header class="entry-header clearfix">
@@ -52,19 +24,7 @@ get_header(); ?>
                                 <div class="mh-ad-label">Advertisement</div>
                                 <div class="mh-ad-area">
                                     <div style="font-size: 13px; padding: 0.5em; background: #f5f5f5; border: 1px solid #ebebeb; text-align: center;">
-                                    <?php 
-                                    $arg = array('post_type' => 'posts_banner', 'posts_per_page' => '2'); $the_query = new WP_Query( $arg ); 
-                                    if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); 
-                                    ?>
-
-                                    <?php $the_query->get_field('banner_name'); ?>
-                                    <a target="_blank" href="<?php echo get_field('banner_url') ?>">                    
-                                    <img  id="img" src="<?php echo get_the_post_thumbnail_url(); ?>" style="width:350px; height:350px; margin-top:10px;" >
-                                    </a>
-
-                                    <?php endwhile; else: ?>
-                                        <p>There are no header adverts available<p>
-                                    <?php endif; ?>
+                                    
                                         <!-- <a target="_blank" href="#" title="Purchase MH Magazine Premium">Here you can place more advertisements and banners</a></div> -->
                                 </div>
                             </div>
@@ -78,12 +38,14 @@ get_header(); ?>
                                 <!--<figcaption class="wp-caption-text">Image Credit: The Script Photography</figcaption>-->
                             </figure>
 
-                            <?php $one = get_the_content(); var_dump($one); exit(); ?>
                             
                            
                         </div>
                        
 
                     </article>
-                  </div>
-                  </div>
+                </div>
+            </div>
+        </div>
+
+    <?php   get_footer(); ?>
