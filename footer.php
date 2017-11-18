@@ -6,13 +6,13 @@
       <i class="fa fa-twitter fa-stack-1x" style="color:red;"></i>
       </span> -->
       <div class="text-center" style="word-spacing:1em;">
-            <i class="fa fa-facebook-square" style="font-size:28px;" aria-hidden="true"></i>          
+            <i class="fa fa-facebook-square" style="font-size:28px; color: blue;" aria-hidden="true"></i>          
           
-            <i class="fa fa-instagram" style="font-size:28px;"></i>          
+            <i class="fa fa-instagram" style="font-size:28px; color: #fb3958;"></i>          
 
-            <i class="fa fa-twitter" style="font-size:28px;"></i>          
+            <i class="fa fa-twitter" style="font-size:28px; color: #1DA1F2;"></i>          
           
-            <i class="fa fa-google-plus-square" style="font-size:28px;"></i>          
+            <i class="fa fa-google-plus-square" style="font-size:28px; color: #DB4437;"></i>          
       </div>
       
         
