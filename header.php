@@ -15,7 +15,6 @@
         ?>
     </title>
     
-    <link href="<?php echo get_stylesheet_directory_uri(); ?>/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Fjalla+One|Josefin+Sans" rel="stylesheet">
   </head>
   <?php wp_head(); ?>
