@@ -7,19 +7,19 @@
       </span> -->
       <div class="text-center" style="word-spacing:1em;">
           <a href="https://www.facebook.com/Thewomenslawyer-747784002083724/" target="new">
-            <i class="fa fa-facebook-square" style="color: #fff; font-size:28px;" aria-hidden="true"></i>          
+            <i class="fa fa-facebook-square" style="font-size:28px;" aria-hidden="true"></i>          
           </a>
           
           <a href="https://www.instagram.com/womenslawyer_ng/" target="new">
-            <i class="fa fa-instagram" style="font-size:28px; color: #fff"></i>          
+            <i class="fa fa-instagram" style="font-size:28px;"></i>          
           </a>
 
           <a href="https://twitter.com/womenslawyer_ng" target="new">
-            <i class="fa fa-twitter" style="color: #fff; font-size:28px;" aria-hidden="true"></i>          
+            <i class="fa fa-twitter" style="font-size:28px;"></i>          
           </a>
           
           <a href="https://plus.google.com/u/0/104037967853574181673" target="new">
-            <i class="fa fa-google-plus-square" style="font-size:28px; color: #fff"></i>          
+            <i class="fa fa-google-plus-square" style="font-size:28px;"></i>          
           </a>
       </div>
       

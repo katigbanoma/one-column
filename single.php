@@ -85,4 +85,5 @@ get_header(); ?>
                        
 
                     </article>
-                  
+                  </div>
+                  </div>
