@@ -2,9 +2,14 @@
         <div class="mh-wrapper clearfix">
             <div class="mh-main clearfix">
                 <div id="main-content" class="mh-content" role="main" itemprop="mainContentOfPage">
-
+                <?php
+                    // Start the loop.
+                    while ( have_posts() ) : the_post();
+            
+                ?>
                     <article>
                         <header class="entry-header clearfix">
+                        
                             <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
                             <div class="mh-subheading-top"></div>
                             <!--<h2 class="mh-subheading">This is a custom subheading for your article</h2>-->
@@ -37,13 +42,15 @@
                             <figure class="entry-thumbnail"> <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo get_the_title() ?>" title="<?php echo get_the_title() ?>" />
                                 <!--<figcaption class="wp-caption-text">Image Credit: The Script Photography</figcaption>-->
                             </figure>
-
-                            
-                           
+                            <?php echo the_content(); ?>
                         </div>
-                       
+                
 
                     </article>
+                <?php
+                    endwhile;
+                ?>
+
                 </div>
             </div>
         </div>
