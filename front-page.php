@@ -5,8 +5,7 @@
 
       <!-- Page Heading -->
       <div class="h4pad" style="font-family: 'Josefin Sans', sans-serif;">
-      A space devoted to cultivating a
-      modest & productive lifestyle.<br>
+      A space devoted to cultivating a modest & productive<br> lifestyle.<br>
       <a href="" class="btn btn-primary">Learn More</a>
       </div>
 
