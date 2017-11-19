@@ -25,7 +25,7 @@ if ( have_posts() ) : ?>
           <!-- Blog Post -->
           <div class="card mb-4">
           <a href="<?php the_permalink() ?>">
-            <img class="card-img-top" src="<?php echo get_the_post_thumbnail_url();?>" alt="Card image cap">
+            <img class="card-img-top catimgheight" id="catimgheight" src="<?php echo get_the_post_thumbnail_url();?>" alt="Card image cap">
             </a>
             <div class="card-body">
               <h2 class="card-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>

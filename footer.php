@@ -6,13 +6,18 @@
       <i class="fa fa-twitter fa-stack-1x" style="color:red;"></i>
       </span> -->
       <div class="text-center" style="word-spacing:1em;">
-            <i class="fa fa-facebook-square" style="font-size:28px; color: blue;" aria-hidden="true"></i>          
-          
+          <a href="https://www.facebook.com/Thewomenslawyer-747784002083724/">
+            <i class="fa fa-facebook-square" style="font-size:28px; color: blue;" aria-hidden="true"></i>
+            </a>          
+          <a href="https://www.instagram.com/womenslawyer_ng/">
             <i class="fa fa-instagram" style="font-size:28px; color: #fb3958;"></i>          
-
+          </a>
+          <a href="https://twitter.com/womenslawyer_ng">
             <i class="fa fa-twitter" style="font-size:28px; color: #1DA1F2;"></i>          
-          
-            <i class="fa fa-google-plus-square" style="font-size:28px; color: #DB4437;"></i>          
+          </a>
+          <a href="https://plus.google.com/u/0/104037967853574181673">
+            <i class="fa fa-google-plus-square" style="font-size:28px; color: #DB4437;"></i>     
+            </a>     
       </div>
       
         

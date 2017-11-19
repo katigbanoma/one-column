@@ -33,6 +33,7 @@ function theme_styles()
 	wp_enqueue_style( 'onecol', get_template_directory_uri() . '/assets/css/1-col-portfolio.css' );
 
 	wp_enqueue_style( 'mainmain', get_template_directory_uri() . '/assets/css/main.css' );
+
 	
 	// Conditionally load the FlexSlider CSS on the homepage
 	// if(is_page('home')) {
@@ -41,3 +42,17 @@ function theme_styles()
 
 }
 add_action('wp_enqueue_scripts', 'theme_styles');
+
+// function google_fonts() {
+// 	$query_args = array(
+// 		'family' => 'El+Messiri',
+// 	);
+// 	wp_register_style( 'google_fonts', add_query_arg( $query_args, "//fonts.googleapis.com/css" ), array(), null );
+//             }
+            
+// add_action('wp_enqueue_scripts', 'google_fonts');
+
+// function new_excerpt_more( $more ) {
+// 	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'your-text-domain') . '</a>';
+// }
+// add_filter( 'excerpt_more', 'new_excerpt_more' );
